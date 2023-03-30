@@ -266,9 +266,10 @@ function myFunction() {
         
           <div class="post-content">
           <h2 id="post-title">${postTitle}</h2>
+          <p hidden id="gettingpostcontent">${postContent}</p>
           <p id="post-body">
       
-          ${postContent}
+          
           </p>
           <div class="author">
           <h3 id="post-author">${postedBy}</h3>
@@ -283,8 +284,14 @@ function myFunction() {
 
           
           
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-emoji/2.0.2/markdown-it-emoji.min.js"></script>
           <script>
-          
+          const htmlOutput = document.getElementById('post-body');
+          const forhtmlOutput = document.getElementById('gettingpostcontent');
+          const content = forhtmlOutput.innerHTML;
+          htmlOutput.innerHTML = content;
           </script>
         </body>
         
@@ -309,21 +316,25 @@ function myFunction() {
 
 if(form){
   console.log("inside form");
+  const md = new markdownit().use(markdownitEmoji);
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const newTitle = document.querySelector("#newTitle").value;
     //let newPost = document.querySelector("#newPost").value;
     let str;
-    const textarea = document.querySelector("#newPost");
+    let htmlcontent
+    const textarea = document.querySelector("#newPost");////////////////////
     //textarea.addEventListener('input', function() {
       // Get the value of the textarea
-      const textareaValue = document.querySelector("#newPost").value;
+      const textareaValue = document.querySelector("#newPost").value;///////////////////
+      htmlcontent = md.render(textareaValue);
       // console.log(textareaValue);
       // Replace newlines with HTML line breaks
-      const modifiedTextareaValue = textareaValue.replace(/\n/g, "<br>\r\n");
+      //const modifiedTextareaValue = textareaValue.replace(/\n/g, "<br>\r\n");//////////////
       
       // Store the modified value in the object property
-      str = modifiedTextareaValue;
+      //str = modifiedTextareaValue;///////////////////////////////
       // console.log(modifiedTextareaValue);
     //});
 
@@ -345,7 +356,7 @@ if(form){
     const newPosst = {
       // postid : id,
       title: newTitle,
-      content: str,
+      content: htmlcontent,
       user: userrname,
       timestamp: timestamp,
     };
@@ -392,9 +403,28 @@ if(editform){
                   const postedAt = post.timestamp;
                 
                 console.log(postTitle);
+
+                  /////////////////////////////////////////////////
+
+                  
+                  
+
+
+                  /////////////////////////////////////////////////
+
+
+                // const md = new markdownit().use(markdownitEmoji);
+                const md =  new markdownit();
+
+                const turndown = new window.TurndownService();
+
+                const markdownOutput = turndown.turndown(post.content);
+                //const plainText = toPlaintext.render(postContent);
       
                 editTitle.value = postTitle;
-                editContent.value = postContent.replaceAll("<br>\r\n", "\n");
+                editContent.value = markdownOutput;//.replaceAll("<br>\r\n", "\n");/////////////////////
+
+                
       
                 // Add an event listener to the edit form to handle the submit event
                 const editForm = document.getElementById("editForm");
@@ -404,14 +434,17 @@ if(editform){
                   const textareaValue = document.querySelector("#editPost").value;
                   // console.log(textareaValue);
                   // Replace newlines with HTML line breaks
-                  const modifiedTextareaValue = textareaValue.replace(/\n/g, "<br>\r\n");
+                  //const modifiedTextareaValue = textareaValue.replace(/\n/g, "<br>\r\n");///////////
       
                   // Store the modified value in the object property
-                  const str = modifiedTextareaValue;
+                  //const str = modifiedTextareaValue;///////////////////
       
+                  // const plainText = toPlaintext.render(textareaValue);
+                  const htmlcontent = md.render(textareaValue);
+
                   // Update the post data in Gun
                   const updatedTitle = editTitle.value;
-                  const updatedContent = str;
+                  const updatedContent = htmlcontent;
       
                   postRefff.put({ title: updatedTitle, content: updatedContent });
                    //console.log(newPosst);
