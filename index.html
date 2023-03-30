@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"></head>
+    <title>Developer Community</title>
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon"/>
+  </head>
+  <body>
+    
+    <div id="header"><a href="/"><span id="PageTitle">Developer Community</span></a>
+      <div class="user">Welcome, <span id="username"></span>!</div>
+      <button id="logout-button">Logout</button>
+      <button id="createpost-button" class="createpost-btn">Create Post</button>
+    </div>
+    
+    <div class="container">
+      
+      <!-- <form class="form"> 
+        <input type="text" autocomplete="off" id="newTitle" placeholder="Title" required>
+        
+        <textarea wrap="off" autocomplete="off" id="newPost" placeholder="Share any experiences, interview tips, interesting things..."></textarea>
+        <button type="submit">Share</button>
+      </form> -->
+      <div class="posts"> 
+        <!-- posts will be added here -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/amark/gun@master/axe.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

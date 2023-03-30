@@ -1,0 +1,132 @@
+:root{
+    --light-color: #fff;
+    --light-color-alt: #afb6cd;
+    --primary-background-color: #131417;
+    --secondary-background-color: #252830;
+  }
+  
+  
+  body{
+    margin: 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+
+    #header {
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-top: 10px;
+        /* margin-top: 0;  */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    
+        /* background-color: rgb(24, 112, 243); */
+        color: azure;
+        background: var(--secondary-background-color);
+      }
+
+      #header a {
+        text-decoration: none;
+        color: azure;
+      }
+
+      #editpostheader {
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: bold;
+        /* padding-top: 10px; */
+        /* margin-top: 0;  */
+        /* padding-bottom: 10px; */
+        margin-bottom: 10px;
+        overflow: hidden;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    
+        /* background-color: rgb(24, 112, 243); */
+        color: rgb(7, 7, 7);
+        /* background: var(--secondary-background-color); */
+      }
+    
+      #PageTitle {
+        padding-left: 15px;
+      }
+
+      #shortpagetitle {
+        padding-left: 15px;
+        margin-left: 60px;
+        font-size: 1.1em;
+      }
+
+#editTitle {
+    height: 120px;
+    position: relative;
+    font-weight: 900;
+    text-align: start;
+    padding: 10px;
+    font-size: 2.5em;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+
+  /* textarea */
+  #editPost {
+    height: 350px;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 1.2em;
+    resize: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  input[type="text"]:focus {
+      border: none;
+      box-shadow: none;
+  }
+
+  /* input[type="text"]:focus {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 10px;
+     box-sizing: border-box; 
+    box-shadow: 0 0 20px #00aeff;
+    background: var(--secondary-background-color);
+    color: var(--light-color-alt);
+  } */
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background: var(--secondary-background-color);
+    color: white;
+    border-radius: 5px;
+    display: block;
+    /* position: static; */
+    margin-left: 10px;
+    margin-top: 50px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 2;
+    margin-bottom: 10px;
+  }

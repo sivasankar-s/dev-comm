@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="newpoststyle.css">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon"/>
+  </head>
+    <title>New Post - Dev-Comm </title>
+  </head>
+  <body>
+    
+    <!-- <div id="header"><span id="PageTitle">Developer Community</span>
+      <button id="logout-button">Logout</button>
+      <button id="createpost-button">Create Post</button>
+    </div> -->
+    <!-- <div class="user">Welcome, <span id="username"></span>!</div> -->
+
+    <div id="header"><a href="/"><span id="PageTitle">Developer Community</span></a></div>
+    <div id="createpostheader"><span id="shortpagetitle">Create Post</span></div>
+    <div class="container">
+      
+      
+      <form class="form"> 
+        <input type="text" autocomplete="off" id="newTitle" placeholder="Title here..." required>
+        <!-- <input type="text" autocomplete="off" id="newPost" placeholder="Share any experiences, interview tips, interesting things..." /> -->
+        <textarea  autocomplete="off" id="newPost" placeholder="Share any experiences, interview tips, interesting things..."></textarea>
+        <div id="footer"><button type="submit" id="submitbtn">Share</button></div>
+      </form>
+      <!-- <div class="posts"> 
+        posts will be added here 
+      </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/amark/gun@master/axe.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

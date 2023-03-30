@@ -1,0 +1,323 @@
+:root{
+  --light-color: #fff;
+  --light-color-alt: #afb6cd;
+  --primary-background-color: #131417;
+  --secondary-background-color: #252830;
+}
+
+body{
+  margin: 0;
+}
+
+
+.container {
+    max-width: 800px;
+    /* position: relative; */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #header {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+    /* margin: 0px;  */
+    top: 0;
+    left: 0;
+    /* position: relative; */
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 1;
+    
+
+    /* background-color: rgb(24, 112, 243); */
+    color: azure;
+    background: var(--secondary-background-color);
+  }
+
+  #header a {
+    text-decoration: none;
+    color: azure;
+  }
+
+  #PageTitle {
+    padding-left: 15px;
+  }
+
+  .user {
+    position: relative;
+    
+    display: inline-block;
+    text-align: right;
+    width: 35vw;
+    /* float: right; */
+
+    padding-left: 30px;
+    /* ////margin-top: -80px;/////////// */
+    /* margin-bottom: 50px; */
+    /* font-size: 40px; */
+    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  #logout-button {
+    padding: 10px 20px;
+    /* background: var(--secondary-background-color); */
+    font-weight: bold;
+    background: rgb(134, 134, 134);
+    color: #fdfdfd;
+    border-radius: 5px;
+    
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin-top: 10px; */
+    text-align: left;
+    display: flex;
+    float: right;
+   
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  #logout-button:hover {
+    background: rgb(110, 110, 110);
+  }
+
+  .createpost-btn {
+    padding: 10px 20px;
+    /* background: var(--secondary-background-color); */
+    
+    background: #027bdf;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+    text-align: right;
+    display: flex;
+    float: right;
+    border: 2px solid #027bdf;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .createpost-btn:hover{
+    
+    background: #0533ff;
+    color: white;
+    
+    border: 2px solid #0533ff;
+    
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* z-index: -1; */
+  }
+  
+  .form {
+    margin-bottom: 20px;
+    
+  }
+  
+
+  
+
+  
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180px;
+    
+  }
+
+  
+  .post {
+      cursor: pointer;
+    background-color: rgb(235, 235, 235);
+    /* box-sizing: border-box; */
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 20px;
+    height: 180px;
+    width: 100%;
+    font-size: 30px;
+    font-style: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-height: max-content;
+
+    
+    
+    position: relative;
+    /* text-justify: auto;
+    text-align: center; */
+  }
+
+  /* .post::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 0 5px;
+  } */
+
+  .post:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  #posted-by {
+    display: block;
+    padding-top: 15px;
+    padding-left: 30px;
+   font-size: 23px; 
+   /* position: relative; */
+   text-align: left;
+   max-width: max-content;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   /* text-justify: distribute; */
+  }
+
+  #posted-at {
+    display: block;
+    padding-top: 7px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+   font-size: 17px; 
+   color: #555555;
+   /* position: relative; */
+   text-align: left;
+   max-width: max-content;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   /* text-justify: distribute; */
+  }
+
+  #card-title {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 40px;
+    margin: 15px;
+    padding-left: -5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .ttitle {
+    position: relative;
+  }
+
+  .ttitle .tooltiptext {
+    visibility: hidden;
+  width: 120px;
+  background-color: #252830;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 5px;
+  font-size: 0.5em;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  max-width: fit-content;
+  width: 180px;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+
+  .ttitle:hover .tooltiptext {
+
+    visibility: visible;
+    transition: all 0.4s 1.22s ease; /** that's the magic **/
+  }
+
+  #card-title:hover {
+    color: #5005ff;
+  }
+
+  #deleteButton {
+    display: none;
+    border-radius: 100%;
+    border: 3px solid #999999;
+    position: absolute;
+    top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  background-color: rgba(211, 210, 210, 0.658);
+  color: rgb(46, 46, 46);
+  /* text-align: center; */
+  font-size: 20px;
+  /* padding-right: 5px; */
+  line-height: 10px;
+  /* text-align: ; */
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-right: 24px;
+  padding-left: 15px;
+    /* vertical-align: super; */
+    /* transform: translate(-5px, 0px); */
+  overflow: hidden;
+  font-weight: 600;
+  }
+
+  .post:hover  #deleteButton  {
+    display: inline;
+  }
+  #deleteButton:hover {
+    display: inline;
+    background-color: rgba(216, 30, 30, 0.966);
+    color: rgb(233, 233, 233);
+  }
+
+  
+
+  #editButton {
+    padding: 10px 20px;
+    /* background: var(--secondary-background-color); */
+    
+    background: white;
+    color: #054cb8;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 10px;
+    
+    /* margin-top: 10px; */
+    text-align: start;
+    /* top: 1px; */
+    bottom: 10%;
+    display: inline;
+    float: right;
+    border: 2px solid #054cb8;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  #editButton:hover {
+    background-color: #054cb8;
+    color: white;
+  }
+
+  
+
+  #headerpost {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  

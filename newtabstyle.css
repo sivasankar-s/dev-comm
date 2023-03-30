@@ -1,0 +1,126 @@
+:root{
+  --light-color: #fff;
+  --light-color-alt: #afb6cd;
+  --primary-background-color: #131417;
+  --secondary-background-color: #252830;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+    /* margin-top: 0;  */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+
+    /* background-color: rgb(24, 112, 243); */
+    color: azure;
+    background: var(--secondary-background-color);
+  }
+
+  #header a {
+    text-decoration: none;
+    color: azure;
+  }
+  
+  #PageTitle {
+    padding-left: 15px;
+  }
+
+  .post-content {
+    
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1050px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border: 2px solid rgb(212, 212, 212);
+  }
+  
+  #post-title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 6px;
+  }
+  
+  .post-content p {
+    padding: 40px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .author::before  {
+    content: "";
+    /* border-bottom: 2px #131417; */
+    
+    width: 100%;
+    height: 1.2px;
+    background-color: #777777;
+    display: block;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .author {
+    background-color: #fff;
+    
+  }
+
+  #post-author {
+    padding-left: 30px  ;
+    margin-bottom: 10px;
+    color: #5a05bb;
+      font-size: 25px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      
+  }
+
+  #post-at {
+    margin-top: 10px;
+    padding-left: 30px;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #editButton {
+    padding: 10px 20px;
+    /* background: var(--secondary-background-color); */
+    
+    background: #027bdf;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+    text-align: left;
+    display: flex;
+    float: left;
+    border: 2px solid #027bdf;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }

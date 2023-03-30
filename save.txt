@@ -1,0 +1,18 @@
+posts.map().on((post, id) => {
+    const postElement = document.createElement("div");
+    postElement.classList.add("post");
+    postElement.dataset.postId = id; // set the data attribute for the post ID
+    const postReff = gun.get('posts').get(postElement.dataset.postId);
+    postElement.innerHTML =  `
+    <h2 id="card-title">${post.title}</h2>
+    <span id="posted-by">Posted by: ${post.user}</span>
+    <span id="posted-at">On: ${post.timestamp}</span>
+    <span id="posted-at">Id: ${postElement.dataset.postId}</span>
+    <button id="editButton">Edit</button>
+    
+  `;
+    
+    if(postContainer){
+    postContainer.appendChild(postElement);
+    }
+  });

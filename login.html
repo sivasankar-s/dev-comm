@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register Or Login</title>
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon"/>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <style>
+
+        :root{
+            --light-color: #fff;
+            --light-color-alt: #afb6cd;
+            --primary-background-color: #131417;
+            --secondary-background-color: #252830;
+        }
+
+        body {
+        /* background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+        /* background: linear-gradient(120deg, #3d4447 0%, #222222 100%); */
+        background: linear-gradient(120deg, #2f3030 0%, #131313 100%);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        margin-top: 5%;
+        background-color: white;
+        max-width: 700px;
+        max-height: 400px;
+        width: 30%;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1.5px solid #fff;
+        /* box-shadow: 0 0 30px rgba(0, 174, 255, 0.651);   #0085FF */
+        box-shadow: 0 0 30px #0085FF, inset 0px 0px 4px #0085FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      #dheader {
+        text-align: left;
+        font-size: 3em;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: -500px; 
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: absolute;
+        font-weight: 1000;
+        
+        
+        /* background-color: rgb(24, 112, 243); */
+        color: var(--secondary-background-color);
+        color: rgb(250, 250, 250);
+        background: none;
+      }
+
+      .header {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .form {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        display: inline-block;
+        padding: 10px;
+        font-size: 1.4em;
+        max-width: 700px;
+        width: 80%;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 50px;
+        border: none;
+        border-bottom: 2px solid #cfcfcf;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        /* border-radius: 10px; */
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        
+        outline: none;
+        font-size: 1.4em;
+        /* width: 75%; */
+        box-shadow: none;
+        border: none;
+        border-bottom: 2px solid rgba(0, 81, 119, 0.651);;
+        
+
+      }
+
+      input[type="password"] {
+        
+        margin-bottom: 50px;
+        
+
+      }
+
+      button[type="submit"] {
+        padding: 9px 25px;
+        background-color: #202e35;
+        color: white;
+        position: relative;
+        display: inline-block;
+        /* float: right; */
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: none;
+        font-size: 1em;
+        cursor: pointer;
+         font-weight: 500;
+
+        width: 155px;
+        margin-right: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        margin-left: 10px;
+        background: linear-gradient(120deg, #3d4447 0%, #222222 100%);
+        border: 3px solid #22222200;
+
+      }
+
+      button[type="submit"]:hover {
+        /* background-color: #344b57; */
+        background: linear-gradient(120deg, #5f6a6e 0%, #444343 100%);
+        /* background: linear-gradient(120deg, #009adb 0%, #004fa8 100%); */
+        /* border: 3px solid #0061bdb0; */
+        /* box-shadow: 0 0 30px rgba(1, 57, 139, 0.781); */
+      }
+
+      .error {
+        color: rgb(61, 61, 61);
+        font-size: 0.8em;
+        margin-top: 10px;
+        background-color: #e48282;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="dheader"><span id="PageTitle">Developer Community</span> </div>
+    <div class="container">
+      
+      <div class="header">Register or Login</div>
+      <div class="form">
+        <input type="text" id="username" autocomplete="off" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit" id="registerBtn">Register</button>
+        <button type="submit" id="loginBtn">Login</button>
+        
+        <div class="error" id="error"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/amark/gun@master/axe.js"></script>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>
